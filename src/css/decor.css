@@ -1,0 +1,55 @@
+/* 
+ *  ============================================================================
+ *  Decorations 
+ *  ============================================================================
+ *  Everything in this stylesheet is purely decorative and can be omitted or
+ *  changed without breaking the basic layout.
+ */
+html { 
+    background-color: #fcfcff;
+}
+
+body {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    color: #444;
+    background-color: #f6f6ff;
+}
+
+th, td { 
+    border: #ccc 1px solid;
+    padding: 0.2em; 
+}  
+
+footer {
+    border-top: #ccc 1px solid;
+    text-align: center;
+}
+
+blockquote {
+    padding: 1em;
+    box-shadow: 0 0 2px rgba(0,0,0,0.25);
+}
+
+ul li {
+  list-style: disc;
+  margin-left: 1em;
+}
+
+pre code {
+    /*
+     * Lines of code would be spaced using the paragraph spacing, which is
+     * too big, so reduce it.
+     */
+    line-height: 1.1em;
+
+    /*
+     * Lines which are too long will overflow the pre element. To avoid this, 
+     * set white-space to pre-wrap, which will ensure that lines wrap when 
+     * they reach the edge of the element
+     */
+    white-space: pre-wrap;
+    
+    border: rgba(0, 0, 0, 0.15) 1px solid;
+    width: 100%;
+    background-color: #efefee;
+}
