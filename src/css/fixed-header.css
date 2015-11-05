@@ -1,0 +1,10 @@
+@import url(//fonts.googleapis.com/css?family=Droid+Sans);
+
+* { font-family: "Droid Sans", sans-serif; }
+html { padding: 1em 0; font-size: 1em; line-height: 1.6; }
+body { margin: 0 auto; padding: 1em; max-width: 768px; }
+h1 { margin-top: 0; }
+p { margin-top: 1.5em; }
+code { font-family: monospace; display: inline-block; }
+body { padding-top: 144px }
+body > header { position: fixed; top: 0; left: 0; width: 100%; background-color: #eeeeee; padding: 1em; }
