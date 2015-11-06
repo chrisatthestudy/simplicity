@@ -150,10 +150,10 @@ body {
     /*
      *  Because the header is fixed at the top, we need to make the main
      *  body of the page start below the header, which we can do by
-     *  applying padding to the top of the page (the header itself is
-     *  unaffected by this, as its position is fixed).
+     *  adding a suitably-sized margin to the top of the page (the header 
+     *  itself is unaffected by this, as its position is fixed).
      */
-    padding-top: 144px
+    margin-top: 144px
 }
 
 /*
@@ -177,12 +177,12 @@ body > header {
     left: 0;
 
     /*
-     *  Force the header across the full width of the browser area.
-     *  Normally this would still leave it confined within the
-     *  body area (which in this stylesheet is confined to only
-     *  part of the full width), but the position:fixed attribute
-     *  overrides this.
+     *  Force the header to span the full width of the display area,
+     *  otherwise it will only occupy the area needed to display
+     *  its contents.
      */
+    width: 100%;
+    
     background-color: #eeeeee;
     padding: 1em;
 }

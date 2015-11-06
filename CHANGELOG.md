@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.0.3] - 2015-11-06
+- Minor tweaks to fixed-header stylesheet
+
 ## [0.0.2] - 2015-11-05
 - Add fixed-header stylesheet
 
