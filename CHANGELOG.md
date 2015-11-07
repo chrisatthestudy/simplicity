@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.0.4] - 2015-11-07
+- Add sidebar-nav stylesheet
+
 ## [0.0.3] - 2015-11-06
 - Minor tweaks to fixed-header stylesheet
 

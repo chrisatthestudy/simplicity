@@ -6,3 +6,11 @@ body { margin: 0 auto; padding: 3%; max-width: 768px; }
 h1 { margin-top: 0; }
 p { margin-top: 1.5em; }
 code { font-family: monospace; display: inline-block; }
+nav { float: left; width: 22%; padding-right: 3%; }
+article { float: left; width: 75%; }
+footer { clear: both; }
+@media (max-width: 480px) {
+    nav { float: none; width: 100%; }
+    nav li { float: left; }
+    article { float: none; width: 100%; }
+}

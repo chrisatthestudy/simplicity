@@ -114,8 +114,11 @@ body {
      *
      *    padding <all_paddings>
      *    padding <vertical_paddings> <horizontal_paddings>
+     *
+     *  Using a percentage basis helps to make the padding appropriate for
+     *  any viewport size.
      */
-    padding: 1em 3em;
+    padding: 3%;
     
     /*
      *  max-width

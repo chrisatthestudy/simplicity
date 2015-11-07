@@ -1,6 +1,6 @@
 /*  
  *  ============================================================================
- *  Simple single-column CSS
+ *  Simple two-column CSS
  *  ============================================================================
  *  This CSS file is designed to be as simple as possible while still giving
  *  good-looking results. It should be mobile-friendly, and is also designed to 
@@ -8,9 +8,8 @@
  *
  *  There is no 'reset' section -- the styles modify the browser defaults.
  *
- *  This style-sheet was originally derived from the simple.css designed by
- *  Chris Broski (see http://www.chrisbroski.github.io/simple-css/ [broken
- *  link], which is even simpler). 
+ *  This version creates a two-column layout, using the nav element for the
+ *  sidebar, and the article element for the main contents.
  */
 
 /*
@@ -147,4 +146,77 @@ p {
 code {
     font-family: monospace;
     display: inline-block;
+}
+
+nav {
+    /*
+     *  Float the nav element to the left.
+     *
+     *  This assumes that there is only one nav element on the
+     *  page, and puts it in a side column. If there is more that
+     *  one, add a class to it, and add the class selector to
+     *  this css definition.
+     */
+    float: left;
+
+    /*
+     *  Fix the width of the nav element, adding some padding so
+     *  that the contents are not jammed against the edge.
+     *
+     *  Note that it is important that the width is set -- see
+     *  the comment against the article width below.
+     */
+    width: 22%;
+    padding-right: 3%;
+}
+
+article {
+    /*  Float the article element to the left. This will put
+     *  the nav and article elements side by side.
+     */
+    float: left;
+
+    /*
+     *  The width must be restricted so that the width of the
+     *  nav element plus the width of the article element come
+     *  to 100%. If the width element is omitted, the article
+     *  element will take up the full width, and a a result
+     *  the two elements won't appear side by side because
+     *  there isn't enough room.
+     */
+    width: 75%;
+}
+
+footer {
+    /*
+     *  Because the nav and article elements are float, the
+     *  elements which follow them need to have this cleared,
+     *  otherwise they will not display correctly.
+     */
+    clear: both;
+}
+
+/*
+ *  Deal with mobile browsers (or rather, browsers which are at at
+ *  restricted size). For anything up to 480px use a different
+ *  layout.
+ */
+@media (max-width: 480px) {
+    /*
+     *  Remove the float from the nav element, so that instead of
+     *  appearing down the side it will be displayed above the
+     *  article element.
+     */
+    nav { float: none; width: 100%; }
+
+    /*
+     *  As a list is being used to display the navigation links,
+     *  float them horizontally instead of vertically.
+     */
+    nav li { float: left; }
+
+    /*
+     *  Force the main contents of the page to 100%.
+     */
+    article { float: none; width: 100%; }
 }
