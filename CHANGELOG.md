@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.0.5] - 2015-11-08
+- Add three-section stylesheet
+
 ## [0.0.4] - 2015-11-07
 - Add sidebar-nav stylesheet
 
