@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.0.6] - 2015-11-09
+- Add index page
+- Fix font imports
+- Various minor CSS tweaks
+
 ## [0.0.5] - 2015-11-08
 - Add three-section stylesheet
 

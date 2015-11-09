@@ -18,7 +18,8 @@ footer { margin: 0; clear: both; padding: 2%; }
 }
 
 html { background-color: #ddd; }
-header { background-color: #efefff; }
-nav { background-color: #ddd; }
-article { background-color: #efefef; }
-footer { background-color: #efefff; }
+header { background-color: #ccc; }
+nav { background-color: #dfdfdf; }
+article { background-color: #eee; }
+footer { background-color: #ccc }
+nav li { margin-bottom: 1em; }

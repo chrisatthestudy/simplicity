@@ -67,5 +67,10 @@ nav li a {
 }
 
 @media (max-width: 480px) {
-    border: none;
+    body {
+	border: none;
+    }
+    blockquote {
+	margin: 0 auto;
+    }
 }

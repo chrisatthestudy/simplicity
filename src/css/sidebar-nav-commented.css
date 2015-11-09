@@ -207,7 +207,7 @@ footer {
      *  appearing down the side it will be displayed above the
      *  article element.
      */
-    nav { float: none; width: 100%; }
+    nav { clear:both; width: 100%; }
 
     /*
      *  As a list is being used to display the navigation links,
@@ -218,5 +218,5 @@ footer {
     /*
      *  Force the main contents of the page to 100%.
      */
-    article { float: none; width: 100%; }
+    article { clear:both; width: 100%; }
 }
