@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 - Add index page
 - Fix font imports
 - Various minor CSS tweaks
+- Update footer dates
 
 ## [0.0.5] - 2015-11-08
 - Add three-section stylesheet
