@@ -30,13 +30,15 @@ ul li {
   margin-left: 1em;
 }
 
-pre code {
+code { 
     /*
      * Lines of code would be spaced using the paragraph spacing, which is
      * too big, so reduce it.
      */
-    line-height: 1.1em;
+    line-height: 1.1em; 
+}
 
+pre {
     /*
      * Lines which are too long will overflow the pre element. To avoid this, 
      * set white-space to pre-wrap, which will ensure that lines wrap when 
@@ -47,6 +49,11 @@ pre code {
     border: rgba(0, 0, 0, 0.15) 1px solid;
     width: 100%;
     background-color: #efefee;
+    padding-left: 0.5em;
+}
+
+header {
+  border-bottom: #ccc 1px solid;
 }
 
 /*
@@ -55,15 +62,14 @@ pre code {
  *  look.
  */
 nav ul { margin-left: -3em; }
-nav li { display: block; }
+nav li { display: block; margin-bottom: 1em; }
 nav li a { display: block; }
-nav li a:hover { background-color: #ccc; }
+nav li a:hover { background-color: #eee; }
 nav li a {
     text-decoration: none;
     padding-left: 0.2em;
-    box-shadow 0 0 2px rgba(0,0,0,0.25);
+    box-shadow: 0 0 2px rgba(0,0,0,0.25);
     border: #ccc 1px solid;
-    margin-bottom: 2px;
 }
 
 @media (max-width: 480px) {

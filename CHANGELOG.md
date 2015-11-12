@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.0.7] - 2015-11-12
+- Minor fixes to the pre, code, and nav elements
+
 ## [0.0.6] - 2015-11-09
 - Add index page
 - Fix font imports
