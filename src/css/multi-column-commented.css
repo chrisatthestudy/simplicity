@@ -1,0 +1,171 @@
+/*  
+ *  ============================================================================
+ *  Simple three-section CSS
+ *  ============================================================================
+ *  This CSS file is designed to be as simple as possible while still giving
+ *  good-looking results. It should be mobile-friendly, and is also designed to 
+ *  aid with accessibility.
+ *
+ *  There is no 'reset' section -- the styles modify the browser defaults.
+ *
+ *  This stylesheet fills the viewport, and is divided into three sections: a
+ *  header, a navigation section, and the main page. On small viewports (such
+ *  as mobiles) the navigation section will be above the main section,
+ *  otherwise it appears down the left-hand side.
+ */
+
+/*
+ *  import
+ *  Import a font from Google Fonts. If you open the font URL in a browser you
+ *  will see the complete font-face definition that is being used.
+ *
+ *  Google doesn't document this on the Google Fonts page, but you can use
+ *  the Google Fonts information to find out what the 'family' parameter
+ *  should be set to for the font(s) you want.
+ *
+ *  If you open the URL in a browser, you will see the complete font-face
+ *  definition.
+ */
+@import url(//fonts.googleapis.com/css?family=Droid+Sans);
+
+/*
+ *  font-family
+ *  A comma-separated list of the fonts to use, in order of preference. If
+ *  a specific font cannot be found, the browser will move on to the next
+ *  font. There should always be a fall-back font as the last font, which
+ *  should be guaranteed to exist -- this generally means using one of the
+ *  default font-family values: serif, sans-serif, etc.
+ *
+ *  Note that selecting a font is done on a per-character basis. If the
+ *  character cannot be found in the first font, the browser will look
+ *  through the other fonts.
+ */
+* { font-family: "Droid Sans", sans-serif; }
+
+html { 
+    /*
+     *  font-size
+     *  Using em values helps with accessibility, as the size is then based on
+     *  the default size set by the user's preference. Commonly 1em is 16px.
+     *
+     *  em values are based on the font size of the parent element (in the case
+     *  of the html element this will be the browser default).
+     */
+    font-size: 1em; /* = 16px */
+    
+    /*
+     *  line-height
+     *  Specifies the height of inline elements. If this is a unit-less number
+     *  (the advisable way to do it), the actual height is this multiplied by
+     *  the font-height.
+     */
+    line-height: 1.6;
+    
+}
+
+body {
+    /* 
+     *  margin
+     *  Specifies the margin width, which is the gap between this element and
+     *  adjacent elements.
+     *
+     *  Full version:
+     *
+     *    margin <top> <right> <bottom> <left>
+     *
+     *  Missing values:
+     *
+     *    margin <all_margins>
+     *    margin <vertical_margins> <horizontal_margins>
+     *
+     *  Special values:
+     *
+     *    auto - fills the margin so that opposite margins occupy the same 
+     *           amount of space, hence it can be used to centre an element
+     *           within a containing element
+     */
+    margin: 0;
+}
+
+h1 {
+  /*
+   *  Remove the top-margin, as the default leaves too big a gap
+   */
+  margin-top: 0;
+}
+
+p {
+  /*
+   * Set appropriate spacing between paragraphs (and other elements)
+   */
+  margin-top: 1.5em;
+}
+
+code {
+    font-family: monospace;
+    display: inline-block;
+}
+
+article {
+    /*
+     *  Remove all the margins -- the elements are going to be immediately
+     *  adjacent to each other, with no gaps between them.
+     */    
+    margin: 0.5em auto;
+    
+    /*
+     *  Clear any floats from previous elements (we need this because the
+     *  section elements are floated -- see below).
+     */
+    clear: both;
+}
+
+section {
+    /*
+     *  Each section forms a new column, so we will float these to the left,
+     *  forcing them to line up adjacent to each other.
+     */
+    float: left;
+    
+    /*
+     *  The width of the sections determines how many columns there will be,
+     *  so the simplest way to handle this is use percentage values. Remember
+     *  that any padding will be added to this, so you might need to decrease
+     *  the width to accommodate any padding or margins.
+     */
+    width: 31%;
+    
+    /*
+     *  Columns usually need a bit of padding.
+     */
+    padding: 1%;
+}
+
+footer {
+    /*
+     *  Because the nav and article elements are float, the
+     *  elements which follow them need to have this cleared,
+     *  otherwise they will not display correctly.
+     */
+    clear: both;
+    margin: 0;
+    padding: 2%;
+}
+
+/*
+ *  Deal with mobile browsers (or rather, browsers which are at at
+ *  restricted size). For anything up to 480px use a different
+ *  layout.
+ */
+@media (max-width: 480px) {
+    /*
+     *  Force the main contents of the page to 100%.
+     */
+    article { clear: both; width: 100%; }
+    
+    /*
+     *  Horizontal columns really don't work well in constricted views, so
+     *  let's revert to a standard vertical layout.
+     */
+     section { float: none; width: auto; padding: 0.5em; }
+}

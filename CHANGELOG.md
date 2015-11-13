@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.0.8] - 2015-11-13
+- Add multi-column stylesheet
+
 ## [0.0.7] - 2015-11-12
 - Minor fixes to the pre, code, and nav elements
 

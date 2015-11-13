@@ -5,6 +5,9 @@
  *  Everything in this stylesheet is purely decorative and can be omitted or
  *  changed without breaking the basic layout.
  */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+* { font-family: "Raleway", sans-serif; }
+
 body {
     border: rgba(0, 0, 0, 0.05) 1px solid;
     color: #444;
