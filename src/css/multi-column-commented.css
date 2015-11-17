@@ -141,6 +141,30 @@ section {
     padding: 1%;
 }
 
+section:last-child {
+    /*
+     *  For the last column, we want it to take up the remaining space,
+     *  regardless of the size of the other columns. The key to making this
+     *  work is the overflow:hidden, which (very unintuitively) has precisely
+     *  this effect.
+     */
+    overflow:hidden;
+
+    /*
+     *  We need to suppress the float, otherwise the overflow instruction
+     *  will have no effect.
+     */
+    float:none;
+
+    /*
+     *  Setting the width to auto let's the column expand to fill the
+     *  available space (provided overflow:hidden is set -- without that,
+     *  the width will expand to 100% and push the section down below
+     *  the floated columns.
+     */
+    width:auto;
+}
+
 footer {
     /*
      *  Because the nav and article elements are float, the

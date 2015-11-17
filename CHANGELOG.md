@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.0.9] - 2015-11-17
+- Adjust multi-column layout to fill the last column
+
 ## [0.0.8] - 2015-11-13
 - Add multi-column stylesheet
 
