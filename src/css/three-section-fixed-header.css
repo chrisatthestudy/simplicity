@@ -1,0 +1,21 @@
+@import url(//fonts.googleapis.com/css?family=Droid+Sans);*{font-family:"Droid Sans",sans-serif}
+html{font-size:1em;line-height:1.6}
+body{margin:150px .5em 0 0}
+body>header{position:fixed;top:0;left:0;width:100%;padding:1em}
+h1{margin-top:0}
+p{margin-top:1.5em}
+code{font-family:monospace;display:inline-block}
+nav{position:absolute;top:151px;left:0;width:29%;padding:0 0 0 .5em}
+nav li{margin-bottom:1em}
+article{margin:0 0 0 33%;width:64%;padding:2%;overflow:hidden}
+footer{margin:0;clear:both;padding:2%}
+@media(max-width:480px){body{margin-top:265px;margin-right:1.5em}
+nav{width:100%}
+nav li{float:left;width:25%}
+article{clear:both;width:100%;margin-left:1%}
+}
+html{background-color:#ddd}
+header{background-color:#ccc}
+nav{background-color:#dfdfdf}
+article{background-color:#eee}
+footer{background-color:#ccc}

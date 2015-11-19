@@ -87,11 +87,24 @@ body {
     margin: 0;
 }
 
+header {
+  /*
+   *  Remove any margins
+   */
+  margin: 0;
+  
+  /*
+   *  Apply padding for white-space
+   */
+  padding: 2%;
+}  
+
 h1 {
   /*
    *  Remove the top-margin, as the default leaves too big a gap
    */
   margin-top: 0;
+  
 }
 
 p {
@@ -118,7 +131,13 @@ article {
      *  section elements are floated -- see below).
      */
     clear: both;
+    
+    /*
+     *  Purely decorative, but helps to separate the sections
+     */
+    border-top: #ccc 1px solid;
 }
+
 
 section {
     /*

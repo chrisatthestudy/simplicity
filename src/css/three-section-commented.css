@@ -87,6 +87,11 @@ body {
     margin: 0;
 }
 
+header { 
+  margin: 0; 
+  padding: 2%; 
+}
+
 h1 {
   /*
    *  Remove the top-margin, as the default leaves too big a gap
@@ -124,6 +129,14 @@ nav {
      */
     width: 30%;
     padding: 2%;
+}
+
+nav li {
+    /*
+     *  Because the list is being used as a list of pseudo-buttons, spread
+     *  them out for a better layout.
+     */
+    margin-bottom: 1em; 
 }
 
 article {
@@ -171,10 +184,20 @@ footer {
      *  As a list is being used to display the navigation links,
      *  float them horizontally instead of vertically.
      */
-    nav li { float: left; }
+    nav li { float: left; margin-bottom: 0; }
 
     /*
      *  Force the main contents of the page to 100%.
      */
     article { clear: both; width: 100%; }
 }
+
+/*
+ *  Add some background colouring, just so we can clearly see the sections
+ */
+html { background-color: #ddd; }
+header { background-color: #ccc; }
+nav { background-color: #dfdfdf; }
+article { background-color: #eee; }
+footer { background-color: #ccc }
+

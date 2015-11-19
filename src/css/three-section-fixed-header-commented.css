@@ -1,0 +1,232 @@
+/*
+ *  import
+ *  Import a font from Google Fonts. If you open the font URL in a browser you
+ *  will see the complete font-face definition that is being used.
+ *
+ *  Google doesn't document this on the Google Fonts page, but you can use
+ *  the Google Fonts information to find out what the 'family' parameter
+ *  should be set to for the font(s) you want.
+ *
+ *  If you open the URL in a browser, you will see the complete font-face
+ *  definition.
+ */
+@import url(//fonts.googleapis.com/css?family=Droid+Sans);
+
+/*
+ *  font-family
+ *  A comma-separated list of the fonts to use, in order of preference. If
+ *  a specific font cannot be found, the browser will move on to the next
+ *  font. There should always be a fall-back font as the last font, which
+ *  should be guaranteed to exist -- this generally means using one of the
+ *  default font-family values: serif, sans-serif, etc.
+ *
+ *  Note that selecting a font is done on a per-character basis. If the
+ *  character cannot be found in the first font, the browser will look
+ *  through the other fonts.
+ */
+* { font-family: "Droid Sans", sans-serif; }
+
+html { 
+    /*
+     *  font-size
+     *  Using em values helps with accessibility, as the size is then based on
+     *  the default size set by the user's preference. Commonly 1em is 16px.
+     *
+     *  em values are based on the font size of the parent element (in the case
+     *  of the html element this will be the browser default).
+     */
+    font-size: 1em; /* = 16px */
+    
+    /*
+     *  line-height
+     *  Specifies the height of inline elements. If this is a unit-less number
+     *  (the advisable way to do it), the actual height is this multiplied by
+     *  the font-height.
+     */
+    line-height: 1.6;
+}
+
+body { 
+    /* 
+     *  margin
+     *  Specifies the margin width, which is the gap between this element and
+     *  adjacent elements.
+     *
+     *  Full version:
+     *
+     *    margin <top> <right> <bottom> <left>
+     *
+     *  Missing values:
+     *
+     *    margin <all_margins>
+     *    margin <vertical_margins> <horizontal_margins>
+     *
+     *  Special values:
+     *
+     *    auto - fills the margin so that opposite margins occupy the same 
+     *           amount of space, hence it can be used to centre an element
+     *           within a containing element
+     *
+     *  For this version we need to set the top margin so that the body of
+     *  of the page is forced down below the bottom of the header section.
+     *  The header section itself ignores the body margins as its location is
+     *  fixed, and not part of the normal document flow.
+     */
+    margin: 150px 0.5em 0 0; 
+}
+
+header { 
+}
+
+body > header { 
+    /*
+     *  The header's position is fixed, as opposed to being relative
+     *  to any other page element.
+     */
+    position: fixed;
+
+    /*
+     *  Because the header is fixed, we need to specify its actual
+     *  position.
+     */
+    top: 0;
+    left: 0;
+
+    /*
+     *  Force the header to span the full width of the display area,
+     *  otherwise it will only occupy the area needed to display
+     *  its contents.
+     */
+    width: 100%;
+    
+    /*
+     *  Apply some whitespace to the header contents.
+     */
+    padding: 1em; 
+}
+
+h1 {
+    /*
+     *  Remove the top-margin, as the default leaves too big a gap
+     */
+    margin-top: 0;
+}
+
+p {
+    /*
+     * Set appropriate spacing between paragraphs (and other elements)
+     */
+    margin-top: 1.5em;
+}
+
+code { 
+    font-family: monospace; 
+    display: inline-block; 
+}
+
+nav {
+    /*
+     *  Fix the position of the nav sidebar so that it is on the left, below
+     *  the main header.
+     */
+    position: absolute; 
+    top: 151px; 
+    left: 0;
+    
+    /*
+     *  Restrict the size to one-third of the viewport. This needs to work in
+     *  conjunction with the margin of the main article section (see below).
+     */
+    width: 29%;
+    
+    /*
+     *  padding
+     *  Specifies the padding, which is the gap between the content of this
+     *  element and its enclosing border
+     *
+     *  Full version:
+     *
+     *    padding <top> <right> <bottom> <left>
+     *
+     *  Missing values:
+     *
+     *    padding <all_paddings>
+     *    padding <vertical_paddings> <horizontal_paddings>
+     */
+    padding: 0 0 0 0.5em; 
+}
+
+nav li { 
+    margin-bottom: 1em; 
+}
+
+article {
+    /* 
+     *  margin
+     *  Specifies the margin width, which is the gap between this element and
+     *  adjacent elements.
+     *
+     *  Full version:
+     *
+     *    margin <top> <right> <bottom> <left>
+     *
+     *  Missing values:
+     *
+     *    margin <all_margins>
+     *    margin <vertical_margins> <horizontal_margins>
+     *
+     *  Special values:
+     *
+     *    auto - fills the margin so that opposite margins occupy the same 
+     *           amount of space, hence it can be used to centre an element
+     *           within a containing element
+     *
+     *  Clear all the margins except the left, which we set so that it pushes
+     *  the element to the right of the nav sidebar (see above).
+     */
+    margin: 0 0 0 33%; 
+    width: 64%; 
+    padding: 2%; 
+    overflow: hidden; 
+}
+
+footer { 
+    margin: 0; 
+    clear: both; 
+    padding: 2%; 
+}
+
+/*
+ *  Deal with mobile browsers (or rather, browsers which are at at
+ *  restricted size). For anything up to 480px use a different
+ *  layout.
+ */
+@media (max-width: 480px) {
+    /*
+     *  The body's top margin needs to be adjusted to allow for the height
+     *  of both the header and the nav bar, as they are now going to be
+     *  stacked vertically.
+     */
+    body { margin-top: 265px; margin-right: 1.5em; }
+    
+    /*  
+     *  Setting the nav section's width to 100% will force the article section
+     *  to be displayed below it, instead of to the side.
+     */
+    nav { width: 100%; }
+    
+    /*
+     *  Floating the nav links will align them horizontally instead of 
+     *  vertically.
+     */
+    nav li { float: left; width: 25%; }
+    
+    article { clear:both; width: 100%; margin-left: 1%; }
+}
+
+html { background-color: #ddd; }
+header { background-color: #ccc; }
+nav { background-color: #dfdfdf; }
+article { background-color: #eee; }
+footer { background-color: #ccc }
+

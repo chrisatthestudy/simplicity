@@ -40,6 +40,8 @@
  */
 * { font-family: "Droid Sans", sans-serif; }
 
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+
 html { 
     /*
      *  padding
@@ -55,7 +57,7 @@ html {
      *    padding <all_paddings>
      *    padding <vertical_paddings> <horizontal_paddings>
      */
-    padding: 1em 0;
+    padding: 1em;
     
     /*
      *  font-size
@@ -171,11 +173,11 @@ nav {
 }
 
 article {
-    /*  Float the article element to the left. This will put
-     *  the nav and article elements side by side.
+    /*
+     *  Float the article to the left, so that it aligns with the sidebar
      */
-    float: left;
-
+    float:left;
+    
     /*
      *  The width must be restricted so that the width of the
      *  nav element plus the width of the article element come
@@ -213,10 +215,13 @@ footer {
      *  As a list is being used to display the navigation links,
      *  float them horizontally instead of vertically.
      */
-    nav li { float: left; }
+    nav li { float: left; width: 80px; text-align:center; padding: 0; }
 
     /*
      *  Force the main contents of the page to 100%.
      */
     article { clear:both; width: 100%; }
 }
+
+
+
