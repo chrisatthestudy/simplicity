@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.0.11] - 2015-11-20
+- Update appearance of demo index
+
 ## [0.0.10] - 2015-11-19
 - Add three-section, fixed-header layout
 - Apply minor tweaks to all CSS files
