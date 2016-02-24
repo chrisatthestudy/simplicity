@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.0.13] - 2016-02-24
+- Add fixed narrow header layout
+
 ## [0.0.12] - 2016-02-01
 - Add two-column magazine layout
 
